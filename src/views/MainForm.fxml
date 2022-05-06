@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.MotionBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainContext" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainFormController">
+    <children>
+      <ImageView fitHeight="603.0" fitWidth="1000.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/MainPic.jpg" />
+         </image>
+      </ImageView>
+        <Label layoutX="54.0" layoutY="65.0" text="Select Vehicle" textFill="WHITE">
+            <font>
+                <Font name="Ubuntu Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="52.0" layoutY="170.0" text="Vehicle Type" textFill="WHITE">
+            <font>
+                <Font name="Ubuntu Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="54.0" layoutY="276.0" text="Driver" textFill="WHITE">
+            <font>
+                <Font name="Ubuntu Bold" size="24.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="cmbVehicleNum" layoutX="262.0" layoutY="53.0" opacity="0.4" prefHeight="50.0" prefWidth="358.0" promptText="Vehicle Number" style="-fx-background-color: black; -fx-background-radius: 20; -fx-font-weight: 800;" styleClass="my-list-cell" stylesheets="@../asserts/Styles.css">
+         <effect>
+            <Blend opacity="0.2" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ComboBox>
+        <ComboBox fx:id="cmbDriver" layoutX="262.0" layoutY="263.0" opacity="0.4" prefHeight="50.0" prefWidth="358.0" promptText="Driver Name" style="-fx-background-color: black; -fx-background-radius: 20; -fx-font-weight: 800;" styleClass="my-list-cell" stylesheets="@../asserts/Styles.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Blend opacity="0.2" />
+         </effect></ComboBox>
+        <JFXButton fx:id="btnPark" buttonType="RAISED" layoutX="696.0" layoutY="228.0" onAction="#parkOnAction" prefHeight="60.0" prefWidth="278.0" style="-fx-background-color: #8187dc; -fx-background-radius: 10;" text="Park Vehicle" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+         <effect>
+            <MotionBlur />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+        </JFXButton>
+        <JFXButton fx:id="btnShift" buttonType="RAISED" layoutX="696.0" layoutY="313.0" onAction="#onDeliveryOnAction" prefHeight="60.0" prefWidth="278.0" style="-fx-background-color: #8187dc; -fx-background-radius: 10;" text="On delivery Shift" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+        </JFXButton>
+        <JFXButton buttonType="RAISED" layoutX="696.0" layoutY="497.0" onAction="#logInOnAction" prefHeight="54.0" prefWidth="278.0" style="-fx-background-color: #8187dc; -fx-background-radius: 10;" text="Management Log in" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+        </JFXButton>
+      <Label fx:id="lblType" layoutX="388.0" layoutY="170.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Ubuntu Bold" size="24.0" />
+         </font></Label>
+      <Label fx:id="lblSlotNumber" layoutX="214.0" layoutY="420.0" textFill="WHITE" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="350.0">
+         <font>
+            <Font name="Ubuntu" size="100.0" />
+         </font></Label>
+      <AnchorPane layoutX="65.0" layoutY="371.0" opacity="0.4" prefHeight="211.0" prefWidth="507.0" style="-fx-background-color: black; -fx-background-radius: 20;">
+         <children>
+            <Label layoutX="56.0" layoutY="21.0" text="Parking Slot Number" textFill="WHITE">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <AnchorPane layoutX="696.0" layoutY="18.0" onMouseClicked="#refresh" opacity="0.2" prefHeight="153.0" prefWidth="278.0" style="-fx-background-color: black; -fx-background-radius: 20;">
+         <children>
+            <Label fx:id="lblDay" layoutX="70.0" layoutY="24.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font name="Ubuntu Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblClock" layoutX="27.0" layoutY="94.0" textFill="WHITE">
+               <font>
+                  <Font name="Ubuntu Bold" size="35.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

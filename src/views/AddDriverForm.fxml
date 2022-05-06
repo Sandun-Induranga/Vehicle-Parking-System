@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="466.0" prefWidth="917.0" style="-fx-background-color: linear-gradient(to right top, #86b0e5, #79c6de, #97d5cd, #c3dfc6, #e9e7d1);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddDriverFormController">
+   <children>
+      <JFXTextField fx:id="txtName" focusColor="#c77dff" layoutX="41.0" layoutY="40.0" prefHeight="38.0" prefWidth="297.0" promptText="Driver Name" style="-fx-prompt-text-fill: white; -fx-text-fill: white;" unFocusColor="WHITE">
+         <font>
+            <Font name="Ubuntu" size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtNic" focusColor="#c77dff" layoutX="41.0" layoutY="101.0" prefHeight="38.0" prefWidth="297.0" promptText="NIC" style="-fx-prompt-text-fill: white; -fx-text-fill: white;" unFocusColor="WHITE">
+         <font>
+            <Font name="Ubuntu" size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtLicenseNum" focusColor="#c77dff" layoutX="41.0" layoutY="163.0" prefHeight="38.0" prefWidth="297.0" promptText="License Number" style="-fx-prompt-text-fill: white; -fx-text-fill: white;" unFocusColor="WHITE">
+         <font>
+            <Font name="Ubuntu" size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextArea fx:id="txtAddress" focusColor="#c77dff" layoutX="41.0" layoutY="225.0" prefHeight="62.0" prefWidth="297.0" promptText="Address" style="-fx-prompt-text-fill: white; -fx-text-fill: white;" unFocusColor="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextArea>
+      <JFXTextField fx:id="txtTel" focusColor="#c77dff" layoutX="41.0" layoutY="321.0" prefHeight="38.0" prefWidth="297.0" promptText="Contact Number" style="-fx-prompt-text-fill: white; -fx-text-fill: white;" unFocusColor="WHITE">
+         <font>
+            <Font name="Ubuntu" size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="41.0" layoutY="397.0" onAction="#btnAddOnAction" prefHeight="39.0" prefWidth="297.0" style="-fx-background-color: #3f37c9;" text="ADD" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="376.0" fitWidth="532.0" layoutX="354.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/driver.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

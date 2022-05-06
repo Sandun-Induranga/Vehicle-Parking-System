@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: linear-gradient(to right top, #125255, #007672, #009d89, #00c498, #12eb9f);;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ManagerMainFormController">
+   <children>
+      <TabPane layoutX="5.0" layoutY="7.0" prefHeight="587.0" prefWidth="989.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="In Parking Vehicles">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tblInParking" layoutX="28.0" layoutY="101.0" opacity="0.7" prefHeight="425.0" prefWidth="934.0">
+                          <columns>
+                            <TableColumn fx:id="colParkingVehicleNum" prefWidth="251.0" text="Vehicle Number" />
+                            <TableColumn fx:id="colParkingVehicleType" prefWidth="264.0" text="Vehicle Type" />
+                              <TableColumn fx:id="colSlot" prefWidth="155.0" text="Parking Slot" />
+                              <TableColumn fx:id="colParkedTime" prefWidth="263.0" text="Parked Time" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="On Delivery Vehicles">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tblOnDelivery" layoutX="28.0" layoutY="106.0" opacity="0.7" prefHeight="425.0" prefWidth="934.0">
+                          <columns>
+                            <TableColumn fx:id="colDeliveryVehicleNum" prefWidth="192.0" text="Vehicle Number" />
+                            <TableColumn fx:id="colDeliveryType" prefWidth="229.0" text="Vehicle Type" />
+                              <TableColumn fx:id="colDeliveryDriverName" prefWidth="249.0" text="Driver Name" />
+                              <TableColumn fx:id="colLeftTime" prefWidth="263.0" text="Left Time" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="All Vehicles">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tblVehicle" layoutX="28.0" layoutY="106.0" opacity="0.7" prefHeight="425.0" prefWidth="934.0">
+                          <columns>
+                            <TableColumn fx:id="colVehicleNum" prefWidth="189.0" text="Vehicle Number" />
+                            <TableColumn fx:id="colType" minWidth="3.0" prefWidth="238.0" text="Vehicle Type" />
+                              <TableColumn fx:id="colMaxWeight" minWidth="3.0" prefWidth="202.0" text="Maximum Weight" />
+                              <TableColumn fx:id="colPassengers" minWidth="3.0" prefWidth="190.0" text="Number of Passengers" />
+                              <TableColumn fx:id="colVehicleOptions" minWidth="3.0" prefWidth="114.0" text="Options" />
+                          </columns>
+                        </TableView>
+                        <JFXButton fx:id="btnAddVehicle" buttonType="RAISED" layoutX="645.0" layoutY="35.0" onAction="#addVehicleOnAction" style="-fx-background-color: #fb8500;" text="Add Vehicle" textFill="WHITE">
+                           <font>
+                              <Font name="Ubuntu" size="24.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" layoutX="834.0" layoutY="35.0" onAction="#btnVehicleRefreshOnAction" ripplerFill="#1e0d0d" style="-fx-background-color: #973aa8;" text="Refresh" textFill="WHITE">
+                           <font>
+                              <Font name="Ubuntu" size="24.0" />
+                           </font>
+                        </JFXButton>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="All Drivers">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tblDriver" layoutX="28.0" layoutY="109.0" opacity="0.7" prefHeight="425.0" prefWidth="934.0">
+                          <columns>
+                            <TableColumn fx:id="colDriverName" prefWidth="163.0" text="Name" />
+                            <TableColumn fx:id="colNic" prefWidth="155.0" text="NIC" />
+                              <TableColumn fx:id="colLicense" prefWidth="170.0" text="License Number" />
+                              <TableColumn fx:id="colAddress" prefWidth="178.0" text="Address" />
+                              <TableColumn fx:id="colContact" prefWidth="174.0" text="Contact Number" />
+                              <TableColumn fx:id="colOptions" prefWidth="93.0" text="Options" />
+                          </columns>
+                        </TableView>
+                        <JFXButton fx:id="btnDriver" buttonType="RAISED" layoutX="654.0" layoutY="34.0" onAction="#addDriverOnAction" style="-fx-background-color: #fb8500;" text="Add Driver" textFill="WHITE">
+                           <font>
+                              <Font name="Ubuntu" size="24.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" layoutX="832.0" layoutY="34.0" onAction="#btnDriverRefreshOnAction" style="-fx-background-color: #973aa8;" text="Refresh" textFill="WHITE">
+                           <font>
+                              <Font name="Ubuntu" size="24.0" />
+                           </font>
+                        </JFXButton>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

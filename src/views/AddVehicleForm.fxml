@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(to right top, #86b0e5, #79c6de, #97d5cd, #c3dfc6, #e9e7d1);;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddVehicleFormController">
+   <children>
+      <JFXTextField fx:id="txtVehicleNum" focusColor="#c77dff" layoutX="50.0" layoutY="48.0" prefHeight="38.0" prefWidth="243.0" promptText="Vehicle Number" style="-fx-prompt-text-fill: white; -fx-text-fill: white;" unFocusColor="WHITE">
+         <font>
+            <Font name="Ubuntu" size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtMaxWeight" focusColor="#c77dff" layoutX="50.0" layoutY="184.0" prefHeight="38.0" prefWidth="243.0" promptText="Maximum Weight" style="-fx-prompt-text-fill: white; -fx-text-fill: white;" unFocusColor="WHITE">
+         <font>
+            <Font name="Ubuntu" size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="cmbType" focusColor="#c77dff" layoutX="50.0" layoutY="116.0" prefHeight="38.0" prefWidth="243.0" promptText="Type" style="-fx-prompt-text-fill: white; -fx-text-fill: white;" styleClass="my-list-cell" stylesheets="@../asserts/Styles.css" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtPassengers" focusColor="#c77dff" layoutX="50.0" layoutY="251.0" prefHeight="38.0" prefWidth="243.0" promptText="No of Passengers" style="-fx-prompt-text-fill: white; -fx-text-fill: white;" unFocusColor="WHITE">
+         <font>
+            <Font name="Ubuntu" size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="50.0" layoutY="323.0" onAction="#btnAddOnAction" prefHeight="39.0" prefWidth="243.0" style="-fx-background-color: #3f37c9;" text="ADD" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="382.0" fitWidth="381.0" layoutX="355.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/addVehicle.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

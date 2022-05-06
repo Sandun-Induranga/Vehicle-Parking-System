@@ -1,0 +1,25 @@
+.combo-box .cell {
+    -fx-text-fill: white;
+    -fx-font: 20px "Ubuntu";
+}
+
+.my-list-cell {
+    -fx-font: 20px "Ubuntu";
+}
+
+.combo-box-popup .list-view .list-cell {
+    -fx-text-fill: black;
+    -fx-padding: 4 0 4 5;
+    -fx-background-radius: 20;
+    -fx-alignment: center;
+}
+
+.combo-box-popup .list-view .list-cell:filled:hover {
+    -fx-background-color: #27a527;
+    -fx-text-fill: white;
+}
+
+.button:hover {
+    -fx-text-fill: black;
+    -fx-scale-y: 1.1;
+}
