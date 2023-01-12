@@ -1,4 +1,4 @@
-# ✴️ Vehicle-Parking-System ✴️
+#  Vehicle-Parking-System 
 
 <p>This is an in-memory application</p>
 
